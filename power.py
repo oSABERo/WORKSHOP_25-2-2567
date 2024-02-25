@@ -1,4 +1,4 @@
-#EXAMPLE 1
+#EXAMPLE1
 import pandas as pd
 
 #อ่านไฟล์
