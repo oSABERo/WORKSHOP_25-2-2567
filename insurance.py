@@ -20,8 +20,11 @@ smoker_map = {
 }
 df['smoker']=df['smoker'].map(smoker_map)
 
-region_encoded = pd.get_dummies(df, columns=['region'], dtype=int)
+region_encoded = pd.get_dummies(df['region'], columns=['region'], dtype=int)
+print(region_encoded.head())
 df = pd.concat([df, region_encoded], axis=1)
 df = df.drop(['region'], axis=1)
 
 print(df.head())
+
+df.to_csv('ready_insurance.csv', index=False)
