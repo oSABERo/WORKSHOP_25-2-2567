@@ -1,3 +1,4 @@
+# Use "pip install -r requirements.txt " if using windows
 numpy==1.26.4
 pandas==2.2.1
 seaborn==0.13.2
