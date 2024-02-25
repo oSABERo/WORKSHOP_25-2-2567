@@ -20,8 +20,8 @@ smoker_map = {
 }
 df['smoker']=df['smoker'].map(smoker_map)
 
-region_encoded = pd.get_dummies(df, columns['region'])
+region_encoded = pd.get_dummies(df, columns=['region'], dtype=int)
 df = pd.concat([df, region_encoded], axis=1)
-df = df.drop('region', axis=1)
+df = df.drop(['region'], axis=1)
 
 print(df.head())
